@@ -14,6 +14,25 @@ class WaveWindow : public QMainWindow
 public:
     explicit WaveWindow(QWidget *parent = 0);
     ~WaveWindow();
+
+
+    // buttons
+    void showEndEnteringObstaclesButton();
+    void deleteEndEnteringButton();
+    void showClearAndContinueButtons();
+    void deleteClearAndContinueButtons();
+
+    // hint string
+    void showHint(QString hint);
+
+signals:
+    void endEnteringObstaclesButtonClicked();
+    void clearButtonClicked();
+    void continueButtonClicked();
+
+
+
+
     
 private:
     Ui::WaveWindow *ui;
